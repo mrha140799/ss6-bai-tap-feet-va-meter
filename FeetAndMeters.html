@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+    <script>
+        function feetToMeter(feet) {
+            let meter = feet*0.305;
+            return meter;
+        }
+        function meterToFeet(meter) {
+            let feet  = meter*3.2787;
+            return feet;
+        }
+    </script>
+</head>
+<body>
+<p>
+    <input type="button" value="Feet To Meter" onclick="swapFeetToMeter();">
+    <input type="button" value="Meter To Feet" onclick="swapMeterToFeet();"><br>
+    <h1 id="ShowRes"></h1>
+
+</p>
+<script>
+    function swapMeterToFeet() {
+        let meter = parseFloat(prompt("Feet :"));
+        document.getElementById("ShowRes").innerHTML = meter + " (meter) = " + meterToFeet(meter) + " (feet)";
+    }
+    function swapFeetToMeter() {
+        let feet = parseFloat(prompt("Meter :"));
+        document.getElementById("ShowRes").innerHTML = feet + " (feet) = " + feetToMeter(feet) + " (mster)";
+
+
+    }
+</script>
+
+</body>
+</html>
